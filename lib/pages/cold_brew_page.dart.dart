@@ -12,16 +12,20 @@ class ColdBrewPage extends StatelessWidget {
     return ListView(
       children:  const [
         ListItem(
+          brandName: "Grady's COLD BREW",
           image: AppAssets.coffee4,
           price: "150",
           reviews: 65,
           backgroundColor: AppColors.secondSlice,
+          boxFit: BoxFit.scaleDown,
         ),
         ListItem(
+          brandName: "Grady's COLD BREW",
           image: AppAssets.coffee2,
           price: "200",
           reviews: 55,
           backgroundColor: AppColors.firstSlice,
+          boxFit: BoxFit.scaleDown,
         ),
       ],
     );

@@ -8,16 +8,20 @@ import '../../../config/app_colors.dart';
 class ListItem extends StatelessWidget {
   const ListItem({
     super.key,
+    required this.brandName,
     required this.image,
     required this.price,
     required this.reviews,
     required this.backgroundColor,
+    required this.boxFit,
   });
 
+  final String brandName;
   final String image;
   final String price;
   final int reviews;
   final Color backgroundColor;
+  final BoxFit boxFit;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,7 @@ class ListItem extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: 310,
+            height: 320,
             width: 250,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
@@ -38,7 +42,7 @@ class ListItem extends StatelessWidget {
           Positioned(
             top: 100,
             child: Container(
-              height: 210,
+              height: 220,
               width: 250,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
@@ -54,7 +58,7 @@ class ListItem extends StatelessWidget {
           Positioned(
             top: 100,
             child: Container(
-              height: 210,
+              height: 220,
               width: 250,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
@@ -67,7 +71,7 @@ class ListItem extends StatelessWidget {
           Positioned(
             top: 100,
             child: Container(
-              height: 210,
+              height: 220,
               width: 250,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
@@ -86,7 +90,7 @@ class ListItem extends StatelessWidget {
                 width: 160,
                 child: Image.asset(
                   image,
-                  fit: BoxFit.scaleDown,
+                  fit: boxFit,
                 ),
               ),
             ),
@@ -119,12 +123,16 @@ class ListItem extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  "Grady's COLD BREW",
+                  brandName,
                   style: GoogleFonts.bigShouldersText(
-                      color: AppColors.textColor, fontSize: 27, fontWeight: FontWeight.bold),
+                    color: AppColors.textColor,
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  maxLines: 1,
                 ),
                 const SizedBox(
-                  height: 2,
+                  height: 7,
                 ),
                 SizedBox(
                   width: 200,

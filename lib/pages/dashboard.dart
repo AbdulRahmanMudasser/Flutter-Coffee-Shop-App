@@ -16,7 +16,7 @@ class _DashboardPageState extends State<DashboardPage> {
   var _selectedOption = 1;
 
   List<Widget> options = [
-    const BlackGoldPage(),
+    const Starbucks(),
     const ColdBrewPage(),
     const NescafePage(),
     const McCafePage(),
@@ -112,7 +112,7 @@ class _DashboardPageState extends State<DashboardPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              buildOptions(title: "Black Gold", index: 0),
+              buildOptions(title: "Starbucks", index: 0),
               buildOptions(title: "Cold Brew", index: 1),
               buildOptions(title: "Nescafe", index: 2),
               buildOptions(title: "McCafe", index: 3),
